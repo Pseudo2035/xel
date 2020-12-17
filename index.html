@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Xel-the one platform people trust</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
+</head>
+<body>
+	<header id="header">
+		<div id="head">
+			<div id="name">
+				<h3>Xel</h3>
+			</div>
+			<div id="search">
+				<form id="search-box">
+					<div id="search-area">
+						<input id="text-area" type="text" placeholder="search"><button class="fa fa-search" id="search-button">
+					</div>
+					<script>
+					
+					var search=document.getElementById("search-area");
+					var texta=document.getElementById("text-area");
+					search.onclick=function(){
+						search.style.border="2px solid blue";
+					}
+					
+					texta.onblur=function(){
+						search.style.border="1px solid rgb(200,200,200)";
+					}
+					</script>
+				</form>
+			</div>
+		</div>
+		
+		<div id="login">
+			<div id="login-area">
+				<input type="text" class="login-text" placeholder="Email/Phone number"><br><br>
+				<input type="password" class="login-text" placeholder="Password">
+				<div id="button-con">
+					<input type="button" value="Login" class="buttons">
+					<input type="button" value="Close" class="buttons" id="close-login" style="float:right;">
+				</div>
+				<script>
+					var close_login=document.getElementById("close-login");
+					var login=document.getElementById("login");
+					close_login.onclick=function(){
+						login.style.display="none";
+					}
+				</script>
+			</div>
+		</div>
+		<div id="sign-up">
+			<div id="sign-area">
+				<input type="text" class="login-text" placeholder="Fullname"><br><br>
+				<input type="text" class="login-text" placeholder="Email Address"><br><br>
+				<input type="text" class="login-text" placeholder="Phone number"><br><br>
+				<input type="text" class="login-text" placeholder="Home address"><br><br>
+				<input type="password" class="login-text" placeholder="Password"><br><br>
+				<input type="password" class="login-text" placeholder="Confirm Password">
+				<div id="button-con">
+					<input type="button" value="Sign-in" class="buttons">
+					<input type="button" value="Close" class="buttons" id="close-sign" style="float:right;">
+				</div>
+				<script>
+					var close_sign=document.getElementById("close-sign");
+					var sign=document.getElementById("sign-up");
+					close_sign.onclick=function(){
+						sign.style.display="none";
+					}
+				</script>
+			</div>
+		</div>
+		<div id="info">
+			<div id="acc-content">
+				<h4>Munyaradzi Togarepi</h4>
+				<h4>munyaradzitogarepi16@gmail.com</h4>
+				<h4>+26377418978</h4>
+				<h4>First street</h4>
+				<div id="button-con">
+					<input type="button" value="Sign out" class="buttons">
+					<input type="button" value="Close" class="buttons" id="close" style="float:right;">
+				</div>
+				<script>
+					var close=document.getElementById("close");
+					var container=document.getElementById("info");
+					close.onclick=function(){
+						container.style.display="none";
+					}
+				</script>
+			</div>
+		</div>
+		<div id="account">
+			<div id="dropdown">
+				<i id="drop-btn" class="fa fa-sort-desc"></i>
+			</div>
+			<div id="profile">
+				<i id="profile-icon" class="fa fa-user-o"></i>
+			</div>
+		</div>
+		<script>
+			var account=document.getElementById("account");
+			var info=document.getElementById("sign-up");
+			
+			account.onclick=function(){
+				if(info.style.display=="Block"){
+					info.style.display="none";
+				}
+				else{
+					info.style.display="Block";
+				}
+			}
+			
+		</script>
+	</header>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+	<div id="links">
+		<div>
+			<div id="link-all">
+				<a href=""><i class="fa fa-search"></i>  All</a>
+			</div>
+			<div id="link-rest">
+				<a href=""><i class="fa fa-cutlery"></i>  Restarants</a>
+			</div>
+			<div id="link-gues">
+				<a href=""><i class="fa fa-bath"></i>  Guest House</a>
+			</div>
+			<div id="link-bars">
+				<a href=""><i class="fa fa-beer"></i>  Clubs</a>
+			</div>
+			<div id="link-mass">
+				<a href=""><i class="fa fa-bed"></i>  Massage pallars</a>
+			</div>
+		</div>
+	</div>
+	<div id="list">
+	<div id="container">
+	
+		<div class="box">
+			<div class="profile-pic">
+				<img>
+			</div>
+			<div class="content" id="content-1">
+				<h4>The bar</h4>
+				<label>Beer</label>
+				<label>Party</label>
+				<p><b class="status">Open, </b>Closes at 12:30</p>
+			</div>
+			<div class="buttons-drop">
+				<div id="menu-1">
+				<div class="menu-options" id="menu-drop-1">
+					<div class="option">
+						<b id="remove" ><i class="fa fa-remove"></i>Remove</b>
+					</div>
+					<div class="option">
+						<b id="pin"><i class="fa fa-star"></i>Pin</b>
+					</div>
+					<div class="option">
+						<b id="infor"><i class="fa fa-info-circle"></i>Info</b>
+					</div>
+				</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</div>
+				
+				<script>
+					var button=document.getElementById("menu-1");
+					var menu=document.getElementById("menu-drop-1");
+					button.onclick=function(){
+						menu.style.display="Block";
+					}
+				</script>
+			</div>
+		</div>
+	
+	</div>
+	<div id="container">
+	
+		<div class="box">
+			<div class="profile-pic">
+				<img>
+			</div>
+			<div class="content">
+				<h4>The bar</h4>
+				<label>Beer</label>
+				<label>Party</label>
+				<p><b class="status">Open, </b>Closes at 12:30</p>
+			</div>
+			<div class="buttons-drop">
+				<div id="menu-2">
+				<div class="menu-options" id="menu-drop-2">
+					<div class="option">
+						<b id="remove" ><i class="fa fa-remove"></i>Remove</b>
+					</div>
+					<div class="option">
+						<b id="pin"><i class="fa fa-star"></i>Pin</b>
+					</div>
+					<div class="option">
+						<b id="infor"><i class="fa fa-info-circle"></i>Info</b>
+					</div>
+				</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</div>
+				
+				<script>
+					var button2=document.getElementById("menu-2");
+					var menu2=document.getElementById("menu-drop-2");
+					button2.onclick=function(){
+						menu2.style.display="Block";
+					}
+				</script>
+			</div>
+		</div>
+	
+	</div>
+<div id="container">
+	
+		<div class="box">
+			<div class="profile-pic">
+				<img>
+			</div>
+			<div class="content">
+				<h4>The bar</h4>
+				<label>Beer</label>
+				<label>Party</label>
+				<p><b class="status">Open, </b>Closes at 12:30</p>
+			</div>
+			<div class="buttons-drop">
+				<div id="menu-1">
+				<div class="menu-options" id="menu-drop-1">
+					<div class="option">
+						<b id="remove" ><i class="fa fa-remove"></i>Remove</b>
+					</div>
+					<div class="option">
+						<b id="pin"><i class="fa fa-star"></i>Pin</b>
+					</div>
+					<div class="option">
+						<b id="infor"><i class="fa fa-info-circle"></i>Info</b>
+					</div>
+				</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</div>
+				
+				<script>
+					var button=document.getElementById("menu-1");
+					var menu=document.getElementById("menu-drop-1");
+					button.onclick=function(){
+						menu.style.display="Block";
+					}
+				</script>
+			</div>
+		</div>
+	
+	</div>
+	<div id="container">
+	
+		<div class="box">
+			<div class="profile-pic">
+				<img>
+			</div>
+			<div class="content">
+				<h4>The bar</h4>
+				<label>Beer</label>
+				<label>Party</label>
+				<p><b class="status">Open, </b>Closes at 12:30</p>
+			</div>
+			<div class="buttons-drop">
+				<div id="menu-1">
+				<div class="menu-options" id="menu-drop-1">
+					<div class="option">
+						<b id="remove" ><i class="fa fa-remove"></i>Remove</b>
+					</div>
+					<div class="option">
+						<b id="pin"><i class="fa fa-star"></i>Pin</b>
+					</div>
+					<div class="option">
+						<b id="infor"><i class="fa fa-info-circle"></i>Info</b>
+					</div>
+				</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</div>
+				
+				<script>
+					var button=document.getElementById("menu-1");
+					var menu=document.getElementById("menu-drop-1");
+					button.onclick=function(){
+						menu.style.display="Block";
+					}
+				</script>
+			</div>
+		</div>
+	
+	</div>
+	<div id="container">
+	
+		<div class="box">
+			<div class="profile-pic">
+				<img>
+			</div>
+			<div class="content">
+				<h4>The bar</h4>
+				<label>Beer</label>
+				<label>Party</label>
+				<p><b class="status">Open, </b>Closes at 12:30</p>
+			</div>
+			<div class="buttons-drop">
+				<div id="menu-1">
+				<div class="menu-options" id="menu-drop-1">
+					<div class="option">
+						<b id="remove" ><i class="fa fa-remove"></i>Remove</b>
+					</div>
+					<div class="option">
+						<b id="pin"><i class="fa fa-star"></i>Pin</b>
+					</div>
+					<div class="option">
+						<b id="infor"><i class="fa fa-info-circle"></i>Info</b>
+					</div>
+				</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</div>
+				
+				<script>
+					var button=document.getElementById("menu-1");
+					var menu=document.getElementById("menu-drop-1");
+					button.onclick=function(){
+						menu.style.display="Block";
+					}
+				</script>
+			</div>
+		</div>
+	
+	</div>
+	</div>
+	<div id="desc">
+		<div id="map">
+			
+			
+			
+		</div>
+		<div id="details">
+			<div id="core-details">
+				<h3>The Bar</h3>
+				<p>The one place people come to drink</p>
+				<label>Beer</label>
+				<label>Party</label>
+				<label>all the fun</label>
+				<label style="padding-left:30px;"><b class="status">Open</b></label>
+			</div>
+			<div id="fur-details">
+				<div class="details-box">
+					<a><i class="fa fa-male time"></i>120mins</a>
+					<a>     <i class="fa fa-bicycle"></i>40mins</a>
+					<a>     <i class="fa fa-car"></i>15mins</a>
+					<input type="button" id="back-button" value="Back" class="buttons">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var buss=document.getElementById("content-1");
+		var list=document.getElementById("list");
+		var desc=document.getElementById("desc");
+		var back_but=document.getElementById("back-button");
+		
+		buss.onclick=function(){
+			list.style.display="None";
+			desc.style.display="Block";
+		}
+		back_but.onclick=function(){
+			list.style.display="Block";
+			desc.style.display="None";
+		}
+	</script>
+</body>
+</html>
+
